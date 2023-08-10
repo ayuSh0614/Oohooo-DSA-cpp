@@ -43,6 +43,9 @@ int main()
     // }
     string s = "madsm";
     cout<<CheckPalindrome(0,s);
+
+    
+    
     
     
     return 0;
