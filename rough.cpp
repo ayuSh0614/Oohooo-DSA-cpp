@@ -35,32 +35,32 @@
 //     return 0;
 // }
 
-#include <bits/stdc++.h>
-using namespace std;
+// #include <bits/stdc++.h>
+// using namespace std;
 
-int main()
-{
-    // char i = '7';
-    // cout<<int(i)-48<<endl;
+// int main()
+// {
+//     // char i = '7';
+//     // cout<<int(i)-48<<endl;
 
-    vector<vector<int>> v;
-    // v[0].push_back(5);
-    // v[0].push_back(4);
-    // v[0].push_back(3);
-    // v[0].push_back(2);
-    // v[0].push_back(1);
-    // v[1].push_back(5);
-    // v[1].push_back(4);
-    // v[1].push_back(3);
-    // v[1].push_back(2);
-    // v[1].push_back(1);
+//     vector<vector<int>> v;
+//     // v[0].push_back(5);
+//     // v[0].push_back(4);
+//     // v[0].push_back(3);
+//     // v[0].push_back(2);
+//     // v[0].push_back(1);
+//     // v[1].push_back(5);
+//     // v[1].push_back(4);
+//     // v[1].push_back(3);
+//     // v[1].push_back(2);
+//     // v[1].push_back(1);
 
-    vector<int> v1 = {1,2,34};
-    vector<int> v2 = {1,2,34};
-    vector<int> v3 = {1,2,34};
-    v.push_back(v1);
-    v.push_back(v2);
-    v.push_back(v3);
+//     vector<int> v1 = {1,2,34};
+//     vector<int> v2 = {1,2,34};
+//     vector<int> v3 = {1,2,34};
+//     v.push_back(v1);
+//     v.push_back(v2);
+    // v.push_back(v3);
 
     // for (auto i = 0; i != end(); i++)
     // {
@@ -102,42 +102,155 @@ int main()
 
 
 
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// bool printS3(int ind, vector<int> &ds, int s, int sum, int arr[], int n)
+// {
+//     if (ind == n)
+//     {
+//         // condition Satisfied
+//         if (s == sum)
+//         {
+//             for(auto it:ds)
+//             {
+//                 cout<<it<<" ";
+//             }
+//             cout<<endl;
+//             return true;
+//         }
+//         // condition not satisfied
+//         else return false;
+        
+//     }
+//     ds.push_back(arr[ind]);
+//     s += arr[ind];
+
+//     if(printS3(ind + 1, ds, s, sum, arr, n) == true) return true;
+
+//     s-= arr[ind];
+//     ds.pop_back();
+
+//     // not pick
+//     if(printS3(ind+1, ds, s,sum, arr, n) == true) return true;
+// }
+
+// int main()
+// {
+//     vector<int> ds;
+//     printS3(0, ds, )
+//     return 0;
+// }
+// void printS1(int ind, vector<int> &ds, int s, int sum, int arr[], int n)
+// {
+//     if (ind == n)
+//     {
+//         if (s == sum)
+//         {
+//             for(auto it:ds)
+//             {
+//                 cout<<it<<" ";
+//                 cout<<endl;
+//             }
+//         }
+//         return;
+        
+//     }
+//     ds.push_back(arr[ind]);
+//     s += arr[ind];
+//     printS1(ind + 1, ds, s, sum, arr, n);
+//     s-= arr[ind];
+//     ds.pop_back();
+
+//     // not pick
+//     printS1(ind+1, ds, s,sum, arr, n);
+// }
+
+// void printF(int ind, vector<int>& ds, int arr[], int n)
+// {
+//     int maci = 0 ;
+//     if (ind == n)
+//     {
+//         // for(auto it : ds)
+//         // {
+//         //     cout<<it<<" ";
+//         // }
+//         // if (ds.size() == 0)
+//         // {
+//         //     cout<<"{}";
+//         // }
+        
+//         // cout<<endl;
+//         int k = accumulate(ds.begin(), ds.end(), 0);
+//         maci = max(maci, k);
+//         return;
+//     }
+//     // not pick, or not take condition, thiselement is not added to you subsequence
+//     printF(ind+1, ds, arr, n);
+
+    
+//     // take or pick the particular index into the subsequence
+//     ds.push_back(arr[ind]);
+//     printF(ind+1, ds, arr, n);
+//     ds.pop_back();
+
+
+    
+// }
+
+
+
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// int count = 0;
+
+// void printS1(int ind, vector<int> &ds, int s, int sum, int arr[], int n)
+// {
+//     if (ind == n)
+//     {
+//         if (s == sum)
+//         {
+//             // for(auto it:ds)
+//             // {
+//             //     cout<<it<<" ";
+//             //     cout<<endl;
+//             // }
+//             ::count++;
+//         }
+//         return;
+        
+//     }
+//     ds.push_back(arr[ind]);
+//     s += arr[ind];
+//     printS1(ind + 1, ds, s, sum, arr, n);
+//     s-= arr[ind];
+//     ds.pop_back();
+
+//     // not pick
+//     printS1(ind+1, ds, s,sum, arr, n);
+// }
+
+// int main()
+// {
+//     vector <int > v;
+//     int arr[] = {1,1,1};
+//     int sum = 2;
+//     int n = 3;
+//     printS1(0, v, 0, sum, arr, n);
+//     cout<<::count<<endl;
+//     return 0;
+// }
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
-bool printS3(int ind, vector<int> &ds, int s, int sum, int arr[], int n)
-{
-    if (ind == n)
-    {
-        // condition Satisfied
-        if (s == sum)
-        {
-            for(auto it:ds)
-            {
-                cout<<it<<" ";
-            }
-            cout<<endl;
-            return true;
-        }
-        // condition not satisfied
-        else return false;
-        
-    }
-    ds.push_back(arr[ind]);
-    s += arr[ind];
-
-    if(printS3(ind + 1, ds, s, sum, arr, n) == true) return true;
-
-    s-= arr[ind];
-    ds.pop_back();
-
-    // not pick
-    if(printS3(ind+1, ds, s,sum, arr, n) == true) return true;
-}
-
 int main()
 {
-    vector<int> ds;
-    printS3(0, ds, )
+    unordered_map <string, int> mp = {{'a', 1}, {'b', 2}, {'c', 3}};
+
+    cout<<mp['j']<<endl;
+
     return 0;
 }
