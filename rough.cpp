@@ -244,13 +244,62 @@
 
 
 #include <bits/stdc++.h>
+#include <string.h>
+#include <map>
+#include <unordered_map>
 using namespace std;
 
 int main()
 {
-    unordered_map <string, int> mp = {{'a', 1}, {'b', 2}, {'c', 3}};
+    map <int, int> mp2 = {{1, 4}, {3, 2}, {4, 3}};
+    // string s = "567";
+    // char * j = "567";
+    // int k = atoi(j);
+    // cout<<mp['j']<<endl;
+    // cout<<k<<endl;
+    
+    // int k = mp.find();
+    // cout<<k;
 
-    cout<<mp['j']<<endl;
+    // cout<<mp.find(2).first;
+    // int i = 4;
+    // string s = "Ayush is a nice person";
+    // // string j = s + to_string(i);
+    // string sub = s.substr(5);
+    // string j = "55";
+    // int k = int(j);
+    // cout<<k<<endl;
+
+    // unordered_map<char, int> mp1 = {{'a', 1}, {'b', 2}, {'c', 3}};
+    // if(mp1 == mp2)
+    // {
+    //     cout<<"yes"<<endl;
+    // }
+    // else{
+    //     cout<<"No"<<endl;
+    // }
+    // for(auto i : mp2)
+    // {
+    //     cout<<i.first<<i.second<<endl;
+    // }
+
+    auto i = mp2.find(3);
+    int sum = 0;
+    while (i != mp2.end())
+    {
+        // sum = i;
+        // cout<<i<<endl;
+        cout<<(*i).second<<endl;
+
+        i++;
+    }
+
+    for(auto i: mp2)
+    {
+        cout<<i.first<<i.second;
+    }
+    
+    
 
     return 0;
 }
