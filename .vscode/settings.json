@@ -6,5 +6,6 @@
         "vector": "cpp",
         "unordered_set": "cpp",
         "array": "cpp"
-    }
+    },
+    "python.analysis.typeCheckingMode": "off"
 }

@@ -251,8 +251,8 @@ using namespace std;
 
 int main()
 {
-    map <int, int> mp2 = {{1, 4}, {3, 2}, {4, 3}};
-    // string s = "567";
+    map <int, int> mp2 = {{1, 4}, {1, 2}, {4, 3}};
+    // string s = "567"; 
     // char * j = "567";
     // int k = atoi(j);
     // cout<<mp['j']<<endl;
@@ -283,22 +283,31 @@ int main()
     //     cout<<i.first<<i.second<<endl;
     // }
 
-    auto i = mp2.find(3);
-    int sum = 0;
-    while (i != mp2.end())
-    {
-        // sum = i;
-        // cout<<i<<endl;
-        cout<<(*i).second<<endl;
+    // auto i = mp2.find(3);
+    // int sum = 0;
+    // while (i != mp2.end())
+    // {
+    //     // sum = i;
+    //     // cout<<i<<endl;
+    //     cout<<(*i).second<<endl;
 
-        i++;
-    }
+    //     i++;
+    // }
 
-    for(auto i: mp2)
-    {
-        cout<<i.first<<i.second;
-    }
-    
+    // for(auto i: mp2)
+    // {
+    //     cout<<i.first<<i.second;
+    // }.
+
+    // int k = 34;
+    // int j = k&5;
+    // cout<<j<<endl;
+
+    // cout<<mp2[1]<<endl;
+    int j = 2;
+    string k = string(j, 'i');
+    // /cout << k << endl;
+
     
 
     return 0;
