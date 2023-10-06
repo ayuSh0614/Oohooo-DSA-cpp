@@ -82,6 +82,7 @@ void inorder(node * root)
     inorder(root->left);
     cout<<root->data<<endl;
     inorder(root->right);
+    
 }
 
 void preorder(node* root)
@@ -103,9 +104,31 @@ void postorder(node* root)
     {
         return;
     }
-    preorder(root->left);
-    preorder(root->right);
+    postorder(root->left);
+    postorder(root->right);
     cout<<root->data<<" ";
+}
+
+node* buildFromPreorder(node* &root)
+{
+
+    cout<<"Enter data for root"<<endl;
+    int data;
+    cin>>data;
+    if(root == NULL)
+    {
+        root = new node(data);
+    }
+    if(root->data > data)
+    {
+        
+        root->left = buildFromPreorder(root->left);
+    }
+    if(root->data < data)
+    {
+        root->right = buildFromPreorder(root->right);
+    }
+    return root;
 }
 
 void buildFromLevelOrder(node* &root)
@@ -148,24 +171,28 @@ int main()
 {
     node* root = NULL;
 
-    buildFromLevelOrder(root);
+    // buildFromLevelOrder(root);
+    buildFromPreorder(root);
 
     // // creating a tree
     // root = buildTree(root);
     // // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
     // // 1 3 5 7 11 17 -1 -1 -1 -1 -1 -1 -1
+    // 4 8 5 0 1 -1 6 -1 -1 -1 -1 -1 -1
     // // level order traversal
     // cout<<"Printing the level order traversal output"<<endl;
-    levelOrderTraversal(root);
+    // levelOrderTraversal(root);
 
     // cout<<"Inorder traversal is: ";
-    inorder(root);
+    // inorder(root);
 
     // cout<<"Postorder traversal is: ";
-    postorder(root);
+    // postorder(root);
 
     // cout<<"Preorder traversal is: ";
     preorder(root);
 
     return 0;
 }
+
+// 8 5 17 10 12
